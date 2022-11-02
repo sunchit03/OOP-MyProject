@@ -1,3 +1,12 @@
+/*
+Full Name: Sunchit Singh
+Email    : sunchit-singh@myseneca.ca
+StudentID: 169146214
+Date     : November 1, 2022
+*/
+
+// I have done all the coding by myself and only copied the code that my professor provided to complete my workshops and assignments.
+
 #include <iostream>
 #include "Menu.h"
 #include "Utils.h"
@@ -30,12 +39,18 @@ namespace sdds {
          coutRef << "Invalid Menu!" << endl;
       }
       else {
+         for (int j = 0; j < m_indent * INDENTATION; j++) {
+            coutRef << " ";
+         }
+         coutRef << m_title << endl;
+
          if (m_numOfItems == 0) {
+            for (int j = 0; j < m_indent * INDENTATION; j++) {
+               coutRef << " ";
+            }
             coutRef << "No Items to display!" << endl;
          }
          else {
-            coutRef << m_title << endl;
-
             for (int i = 0; i < m_numOfItems; i++) {
 
                for (int j = 0; j < m_indent * INDENTATION; j++) {
@@ -68,7 +83,7 @@ namespace sdds {
 
    void Menu::add(const char* item) {
       if (!item) {
-         strcpy(m_title, "");
+         clear();
       }
       else if (!(m_numOfItems == MAX_NO_OF_ITEMS || isEmpty())) {
          strcpy(m_mitem[m_numOfItems].m_item, item);
@@ -87,26 +102,44 @@ namespace sdds {
       if (m_numOfItems) {
          cin >> selection;
 
-         while (cin.fail() || selection < 1 || selection > m_numOfItems) {
+         do {
             if (cin.fail()) {
-               cin.ignore(1000, '\n');
+               
+               cin.clear();
+               cin.ignore(10000, '\n');
                cout << "Invalid Integer, try again: ";
                cin >> selection;
             }
-
-            if (selection < 1 || selection > m_numOfItems) {
+            else if (selection < 1 || selection > m_numOfItems) {
                cout << "Invalid selection, try again: ";
                cin >> selection;
             }
-         }
+         } while (cin.fail() || selection < 1 || selection > m_numOfItems);
+         cin.ignore(1000, '\n');
       }
       return selection;
    }
 
-   Menu::operator int() const{
+   Menu::operator int() const {
       return run();
    }
 
+   void Menu::clear() {
+      strcpy(m_title, "");
+      m_indent = 0;
+      
+      for (int i = 0; i < m_numOfItems; i++) {
+         strcpy(m_mitem[i].m_item, "");
+      }
+      m_numOfItems = 0;
+   }
+
+
+   MenuItem::MenuItem(const char* item) {
+      if (item) {
+         strcpy(m_item, item, 50);
+      }
+   }
 
    std::ostream& MenuItem::display(std::ostream& coutRef) const {
       if (m_item && m_item[0]) {

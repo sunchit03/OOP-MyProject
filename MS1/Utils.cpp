@@ -2,16 +2,17 @@
 // Utils Module
 // File  utils.cpp
 // Version 0.0
-// Date
-// Author
+// Date     November 2, 2022
+// Author   Sunchit Singh (169146214)
 // Description
-// Estra Classes and functions needed in the project
+// Extra Classes and functions needed in the project
 // Revision History
 // -----------------------------------------------------------
 // Name            Date            Reason
-//
+// Sunchit Singh     November 2     String functions
 /////////////////////////////////////////////////////////////////
 ***********************************************************************/
+
 #include "Utils.h"
 
 namespace sdds {

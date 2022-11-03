@@ -1,11 +1,17 @@
-/*
-Full Name: Sunchit Singh
-Email    : sunchit-singh@myseneca.ca
-StudentID: 169146214
-Date     : November 1, 2022
-*/
-
-// I have done all the coding by myself and only copied the code that my professor provided to complete my workshops and assignments.
+/* ------------------------------------------------------
+Citation and Sources
+Final Project Milestone 1
+Module: Menu
+Filename: Menu.cpp
+Version 1.0
+Author	Sunchit Singh (169146214)
+Revision History
+-----------------------------------------------------------
+Date      Reason
+-----------------------------------------------------------
+I have done all the coding by myself and only copied the code
+that my professor provided to complete my project milestones.
+-----------------------------------------------------------*/
 
 #include <iostream>
 #include "Menu.h"
@@ -21,8 +27,7 @@ namespace sdds {
          m_indent = indent;
       }
       else {
-         strcpy(m_title, "");
-         m_indent = 0;
+         clear();
       }
    }
 
@@ -75,7 +80,7 @@ namespace sdds {
          strcpy(m_title, title, 50);
       }
       else {
-         strcpy(m_title, "");
+         clear();
       }
       return *this;
    }

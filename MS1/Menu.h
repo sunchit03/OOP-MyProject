@@ -1,11 +1,17 @@
-/*
-Full Name: Sunchit Singh
-Email    : sunchit-singh@myseneca.ca
-StudentID: 169146214
-Date     : November 1, 2022
-*/
-
-// I have done all the coding by myself and only copied the code that my professor provided to complete my workshops and assignments.
+/* ------------------------------------------------------
+Citation and Sources
+Final Project Milestone 1
+Module: Menu
+Filename: Menu.h
+Version 1.0
+Author	Sunchit Singh (169146214)
+Revision History
+-----------------------------------------------------------
+Date      Reason
+-----------------------------------------------------------
+I have done all the coding by myself and only copied the code
+that my professor provided to complete my project milestones.
+-----------------------------------------------------------*/
 
 #ifndef SDDS_MENU_H_
 #define SDDS_MENU_H_
@@ -19,7 +25,7 @@ namespace sdds {
    class MenuItem {
       friend class Menu;
 
-      char m_item[MAX_LENGTH + 1];
+      char m_item[MAX_LENGTH + 1] = "";
 
       MenuItem() = default;
       MenuItem(const char* item);

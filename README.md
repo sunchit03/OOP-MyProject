@@ -1,3 +1,4 @@
-Sunchit Singh
-169146214
-sunchit-singh@myseneca.ca
+- Sunchit Singh
+- 169146214
+- sunchit-singh@myseneca.ca
+- OOP244NBB

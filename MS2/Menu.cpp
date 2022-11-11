@@ -1,6 +1,6 @@
 /* ------------------------------------------------------
 Citation and Sources
-Final Project Milestone 1
+Final Project Milestone 2
 Module: Menu
 Filename: Menu.cpp
 Version 1.0

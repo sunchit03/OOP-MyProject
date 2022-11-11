@@ -1,3 +1,18 @@
+/* ------------------------------------------------------
+Citation and Sources
+Final Project Milestone 2
+Module: Parking
+Filename: Parking.h
+Version 1.0
+Author	Sunchit Singh (169146214)
+Revision History
+-----------------------------------------------------------
+Date      Reason
+-----------------------------------------------------------
+I have done all the coding by myself and only copied the code
+that my professor provided to complete my project milestones.
+-----------------------------------------------------------*/
+
 #ifndef SDDS_PARKING_H_
 #define SDDS_PARKING_H_
 #include "Menu.h"

@@ -1,3 +1,18 @@
+/* ------------------------------------------------------
+Citation and Sources
+Final Project Milestone 2
+Module: Parking
+Filename: Parking.cpp
+Version 1.0
+Author	Sunchit Singh (169146214)
+Revision History
+-----------------------------------------------------------
+Date      Reason
+-----------------------------------------------------------
+I have done all the coding by myself and only copied the code
+that my professor provided to complete my project milestones.
+-----------------------------------------------------------*/
+
 #include <iostream>
 #include "Parking.h"
 using namespace std;
@@ -129,36 +144,36 @@ namespace sdds {
    }
 
    bool Parking::closeParking() {
-      char selection;
+      char selection[10 + 1];
       cout << "This will close the parking; All the vehicles will be removed!" << endl;
       cout << "Are you sure? (Y)es/(N)o: ";
-      cin >> selection;
-      while (!(selection == 'Y' || selection == 'y' || selection == 'N' || selection == 'n')) {
+      cin.getline(selection, 10, '\n');
+      while (!(strcmp(selection, "Y") == 0 || strcmp(selection, "y") == 0 || strcmp(selection, "N") == 0 || strcmp(selection, "n") == 0)) {
          cout << "Invalid response, only (Y)es or (N)o are acceptable, retry: ";
          cin >> selection;
       }
 
-      if (selection == 'Y' || selection == 'y') {
+      if (strcmp(selection, "Y") == 0 || strcmp(selection, "y") == 0) {
          cout << "Ending application!" << endl;
       }
-      return selection == 'Y' || selection == 'y';
+      return strcmp(selection, "Y") == 0 || strcmp(selection, "y") == 0;
    }
 
    bool Parking::exitParking() {
-      char selection;
+      char selection[10 + 1];
       cout << "This will terminate the application and save the data!" << endl;
       cout << "Are you sure? (Y)es/(N)o: ";
-      cin >> selection;
-      while (!(selection == 'Y' || selection == 'y' || selection == 'N' || selection == 'n')) {
+      cin.getline(selection, 10, '\n');
+      while (!(strcmp(selection, "Y") == 0 || strcmp(selection, "y") == 0 || strcmp(selection, "N") == 0 || strcmp(selection, "n") == 0)) {
          cout << "Invalid response, only (Y)es or (N)o are acceptable, retry: ";
          cin >> selection;
       }
 
-      if (selection == 'Y' || selection == 'y') {
+      if (strcmp(selection, "Y") == 0 || strcmp(selection, "y") == 0) {
          cout << "Exiting application!" << endl;
          saveData();
       }
-      return selection == 'Y' || selection == 'y';
+      return strcmp(selection, "Y") == 0 || strcmp(selection, "y") == 0;
    }
 
    bool Parking::loadData() {

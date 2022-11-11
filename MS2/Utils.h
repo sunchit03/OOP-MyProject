@@ -1,15 +1,15 @@
 /***********************************************************************
 // Utils Module
 // File  utils.cpp
-// Version 0.0
-// Date     November 2, 2022
+// Version 1.0
+// Date     November 11, 2022
 // Author   Sunchit Singh (169146214)
 // Description
 // Extra Classes and functions needed in the project
 // Revision History
 // -----------------------------------------------------------
 // Name            Date            Reason
-// Sunchit Singh     November 2     String functions
+// Sunchit Singh     November 11     String functions
 /////////////////////////////////////////////////////////////////
 ***********************************************************************/
 
